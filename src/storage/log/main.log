@@ -1,0 +1,24 @@
+[2022-04-01T10:31:45+00:00][info] user is being created
+[2022-04-01T10:31:45+00:00][info] user created email = hacker@hacker.com
+[2022-04-01T10:31:45+00:00][info] user created password = 12345
+[2022-04-01T10:31:45+00:00][info] user created role = admin
+[2022-04-01T10:31:45+00:00][info] token assigned : eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJodHRwOi8vZXhhbXBsZS5vcmciLCJhdWQiOiJodHRwOi8vZXhhbXBsZS5jb20iLCJlbWFpbCI6ImFkbWluQHN0b3JlLmNvbSIsInBhc3N3b3JkIjoiMTIzNDUiLCJzdWIiOiJhZG1pbiIsImlhdCI6MTY0ODgwOTEwNSwibmJmIjoxNjQ4ODA5MDQ1LCJleHAiOjE2NDg4OTU1MDV9.pnyfutCtpMQHLsROIHrEj2eYp69g_gOi3idSJIAQIzXYrxs3yu13_7zf_uDxGj0B_726bG5-sqqVDTHpEIwLhw
+[2022-04-01T10:31:45+00:00][info] user is created
+[2022-04-02T07:41:40+00:00][info] user is being created
+[2022-04-02T07:41:40+00:00][info] user created email = punitverma@cedcoss.com
+[2022-04-02T07:41:40+00:00][info] user created password = 12345
+[2022-04-02T07:41:40+00:00][info] user created role = admin
+[2022-04-02T07:41:40+00:00][info] token assigned : eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJodHRwOi8vZXhhbXBsZS5vcmciLCJhdWQiOiJodHRwOi8vZXhhbXBsZS5jb20iLCJlbWFpbCI6ImFkbWluQHN0b3JlLmNvbSIsInBhc3N3b3JkIjoiMTIzNDUiLCJzdWIiOiJhZG1pbiIsImlhdCI6MTY0ODg4NTMwMCwibmJmIjoxNjQ4ODg1MjQwLCJleHAiOjE2NDg5NzE3MDB9.fmcuJfs-GG968KGQPiLhaAER--7K5o_mu37i-RurOfVkXkYFTMy4TZDvJtDx-F47DZHibpMD-boUuwMvizulmg
+[2022-04-02T07:41:40+00:00][info] user is created
+[2022-04-04T09:54:51+00:00][info] user is being created
+[2022-04-04T09:54:51+00:00][info] user created email = punit
+[2022-04-04T09:54:51+00:00][info] user created password = 123
+[2022-04-04T09:54:51+00:00][info] user created role = admin
+[2022-04-04T09:54:51+00:00][info] token assigned : eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJodHRwOi8vZXhhbXBsZS5vcmciLCJhdWQiOiJodHRwOi8vZXhhbXBsZS5jb20iLCJlbWFpbCI6ImFkbWluQHN0b3JlLmNvbSIsInBhc3N3b3JkIjoiMTIzNDUiLCJzdWIiOiJhZG1pbiIsImlhdCI6MTY0OTA2NjA5MSwibmJmIjoxNjQ5MDY2MDMxLCJleHAiOjE2NDkxNTI0OTF9.04bHC5H3EFOQGxFxKKKkrnQ09Q6_bj-YFfROjlZMiuhnm1oC40ICOYwBMFUzvFwTOJbKKQy2jFOSYZFEl4_f3A
+[2022-04-04T09:54:51+00:00][info] user is created
+[2022-04-04T09:55:05+00:00][info] user is being created
+[2022-04-04T09:55:05+00:00][info] user created email = hacker
+[2022-04-04T09:55:05+00:00][info] user created password = 123
+[2022-04-04T09:55:05+00:00][info] user created role = accountant
+[2022-04-04T09:55:05+00:00][info] token assigned : eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJodHRwOi8vZXhhbXBsZS5vcmciLCJhdWQiOiJodHRwOi8vZXhhbXBsZS5jb20iLCJlbWFpbCI6ImFkbWluQHN0b3JlLmNvbSIsInBhc3N3b3JkIjoiMTIzNDUiLCJzdWIiOiJhZG1pbiIsImlhdCI6MTY0OTA2NjEwNCwibmJmIjoxNjQ5MDY2MDQ0LCJleHAiOjE2NDkxNTI1MDR9.6FsYaBLilXbrs6x98Jel6XJDNAQxyvDQgAG7XlFR7sY-YaiywAW1Voz7el7EYiIjQPFshdyrjyyWeYA4mTU8cA
+[2022-04-04T09:55:05+00:00][info] user is created
