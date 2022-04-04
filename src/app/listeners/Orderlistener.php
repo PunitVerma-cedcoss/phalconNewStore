@@ -7,8 +7,19 @@ use Phalcon\Events\Event;
 use Products;
 use Settings;
 
+/**
+ * order's listener class
+ */
 class Orderlistener extends Injectable
 {
+    /**
+     * fires a method if order is being created
+     *
+     * @param Event $event
+     * @param \App\Components\Orderscomponent $component
+     * @param [type] $postData
+     * @return void
+     */
     public function onCreate(Event $event, \App\Components\Orderscomponent $component, $postData)
     {
         // print_r($postData);
@@ -24,6 +35,14 @@ class Orderlistener extends Injectable
         die();
         $this->logger->info("from order After notifications");
     }
+    /**
+     * fires a method after order is created
+     *
+     * @param Event $event
+     * @param \App\Components\Orderscomponent $component
+     * @param [type] $postData
+     * @return void
+     */
     public function onCreated(Event $event, \App\Components\Orderscomponent $component, $postData)
     {
         // print_r($postData);

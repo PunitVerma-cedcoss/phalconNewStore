@@ -2,7 +2,6 @@
 
 namespace App\Components;
 
-use Exception;
 use Phalcon\Di\Injectable;
 use Phalcon\Security\JWT\Builder;
 use Phalcon\Security\JWT\Signer\Hmac;
@@ -11,8 +10,21 @@ use Phalcon\Security\JWT\Validator;
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 
+/**
+ * Helper class to manage tokens
+ * init(role,datetimeObject,userFirebase:bool)
+ * validate(token)
+ */
 class JwtInit extends Injectable
 {
+    /**
+     * return a jwt token based on role
+     *
+     * @param [string] $role
+     * @param [datetime object] $now
+     * @param boolean $useFireBaseJWT
+     * @return string
+     */
     public function init($role, $now, $useFireBaseJWT = false)
     {
         if (!$useFireBaseJWT) {
@@ -40,13 +52,9 @@ class JwtInit extends Injectable
                 ->setSubject($role)   // sub
                 ->setPassphrase($passphrase)                // password 
             ;
-
-            // Phalcon\Security\JWT\Token\Token object
             $tokenObject = $builder->getToken();
 
             echo $tokenObject->getToken();
-            // die();
-
             // The token
             return $tokenObject->getToken();
         } else {
@@ -64,10 +72,15 @@ class JwtInit extends Injectable
             );
             $jwt = JWT::encode($payload, $key, 'HS512');
             $decoded = JWT::decode($jwt, new Key($key, 'HS512'));
-            // print_r($jwt);
             return $jwt;
         }
     }
+    /**
+     * validates a string jwt token
+     *
+     * @param [string] $tokenReceived
+     * @return void
+     */
     public function jwtValidate($tokenReceived)
     {
         $resp = '';
@@ -85,26 +98,12 @@ class JwtInit extends Injectable
 
             // Parse the token
             $parser      = new Parser();
-
-            // Phalcon\Security\JWT\Token\Token object
             $tokenObject = $parser->parse($tokenReceived);
-
-            // echo "<pre>";
-            // print_r($tokenObject);
-            // echo "</pre>";
-            // echo $tokenObject->getClaims()->getPayload()['sub'];
             $resp = $tokenObject->getClaims()->getPayload()['sub'];
             // Phalcon\Security\JWT\Validator object
             $validator = new Validator($tokenObject, 0);
             $validator
-                // ->validateAudience($audience)
                 ->validateExpiration($expires);
-            // ->validateId($id)
-            // ->validateIssuedAt($issued)
-            // ->validateIssuer($issuer)
-            // ->validateNotBefore($notBefore)
-            // ->validateSignature($signer, $passphrase);
-            // echo "<br> token is valid <br>";
         } catch (\Exception $e) {
             echo "<pre>";
             echo "</pre>";
@@ -112,37 +111,33 @@ class JwtInit extends Injectable
             $resp = "error";
             echo "<br>";
             die();
-            // die("token has errors");
         }
         return $resp;
     }
+    /**
+     * validates a firebase jwt token
+     *
+     * @param [string] $tokenReceived
+     * @return void
+     */
     public function firebaseJwtValidate($tokenReceived)
     {
         try {
             $key = "QcMpZ&b&mo3TPsPk668J6QH8JA$&U&m2";
             $decoded = JWT::decode($tokenReceived, new Key($key, 'HS512'));
-            // print_r($decoded);
-            // echo $this->datetime->getTimestamp();
             if ($this->datetime->getTimestamp() < $decoded->exp) {
-                // echo  "token is valid";
                 if (isset($decoded->sub)) {
-                    // echo "valid token";
                 } else {
-                    // echo "role not found";
                     die();
                 }
             } else {
                 $lang  = $this->request->getquery()['locale'] ?? 'en';
-                // echo $this->translator->getTranslator($lang)->_("token has expired");
                 echo "token has expired";
-                // echo "token has expired";
             }
         } catch (\Exception $e) {
             $lang  = $this->request->getquery()['locale'] ?? 'en';
-            // echo $this->translator->getTranslator($lang)->_($e->getMessage());
             echo $e->getMessage();
             die();
         }
-        // die();
     }
 }

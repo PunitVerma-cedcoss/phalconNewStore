@@ -6,9 +6,17 @@ use Orders;
 use Phalcon\Cli\Task;
 use Products;
 use Settings;
-
+/**
+ * helper class for database operations on cli
+ */
 class DbTask extends Task
 {
+    /**
+     * set default price
+     *
+     * @param [int] $price
+     * @return void
+     */
     public function setPriceAction($price)
     {
         $settings = new Settings();
@@ -21,6 +29,12 @@ class DbTask extends Task
         }
         echo PHP_EOL;
     }
+    /**
+     * set default stock
+     *
+     * @param [int] $stock
+     * @return void
+     */
     public function setStockAction($stock)
     {
         $settings = new Settings();
@@ -33,6 +47,11 @@ class DbTask extends Task
         }
         echo PHP_EOL;
     }
+    /**
+     * returns stock count
+     *
+     * @return void
+     */
     public function getStockCountAction()
     {
         $product = new Products();
@@ -47,6 +66,11 @@ class DbTask extends Task
         print_r($s->Count());
         echo PHP_EOL;
     }
+    /**
+     * returns array of products
+     *
+     * @return void
+     */
     public function getAction()
     {
         $orders = new Orders();

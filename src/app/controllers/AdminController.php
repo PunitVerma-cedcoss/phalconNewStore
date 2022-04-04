@@ -7,11 +7,12 @@ class AdminController extends Controller
 {
     public function indexAction()
     {
-        $lang  = $this->request->getquery()['locale'] ?? 'en';
+        // if not logged in 
+        if (!$this->session->get('token')) {
+            header("location:/admin/login");
+        }
         $this->view->t = $this->translator;
         $this->view->token = $this->session->get('token');
-        // $this->assets->addJs('js/role.js');
-        // $this->assets->addJs('js/lang.js');
         $list = new App\Components\Utilscomponent();
         $users = new Permissions();
         $this->view->data2 = $users::find();
@@ -27,8 +28,6 @@ class AdminController extends Controller
                     $action = $data[1];
                     array_push($controllers, $controller);
                     array_push($actions, $action);
-                    // echo $controller . "->" . $action . '<br>';
-                    // $roles[$controller] = []
                 }
             }
             foreach ($controllers as $c) {
@@ -48,10 +47,6 @@ class AdminController extends Controller
                     'permissions' => json_encode($aclData)
                 ]
             );
-            // echo "<pre>";
-            // print_r($this->request->getPost()['name']);
-            // echo "</pre>";
-            // die();
             if ($s->save()) {
                 header("location:/secure/mkACL?bearer=" . $this->request->getQuery()['bearer']);
             }
@@ -65,7 +60,6 @@ class AdminController extends Controller
         $this->view->token = $this->session->get('token');
         $lang  = $this->request->getquery()['locale'] ?? 'en';
         $this->view->t = $this->translator;
-        // $this->assets->addJs('js/lang.js');
         if (isset($this->request->getquery()['name'])) {
             $this->assets->addJs('js/role.js');
             $list = new App\Components\Utilscomponent();

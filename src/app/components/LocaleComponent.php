@@ -7,8 +7,17 @@ use Phalcon\Translate\InterpolatorFactory;
 use Phalcon\Translate\TranslateFactory;
 use Phalcon\Di\Injectable;
 
+/**
+ * helper class to manage translator
+ */
 class LocaleComponent extends injectable
 {
+    /**
+     * returns a translator object
+     *
+     * @param [string] $language
+     * @return NativeArray
+     */
     public function getTranslator($language): NativeArray
     {
         // $language = $this->request->getBestLanguage();

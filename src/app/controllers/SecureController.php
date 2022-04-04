@@ -2,10 +2,10 @@
 
 use Phalcon\Mvc\Controller;
 use Phalcon\Acl\Adapter\Memory;
-use Phalcon\Acl\Role;
-use Phalcon\Acl\Component;
 
-
+/**
+ * mkACLAction will rebuild the acl.cache
+ */
 class SecureController extends Controller
 {
     public function mkACLAction()
@@ -15,23 +15,17 @@ class SecureController extends Controller
         $aclFile = APP_PATH . '/security/acl.cache';
         $acl = new Memory();
         $getList = new App\Components\Utilscomponent();
-
-
         // adding roles 🌏
         $roles_names = new Permissions();
         foreach ($roles_names::find() as $row) {
-            // echo "adding role " . $row->role_name . "<br>";
             $acl->addRole($row->role_name);
             // adding componenets 🍿
             foreach ($getList->getList() as $k => $v) {
                 $k = substr($k, 0, strlen($k) - strlen('Controller'));
-                // print_r($k);
                 $tmp = [];
                 foreach ($v as $action) {
                     $tmp[] = substr($action, 0, strlen($action) - strlen('Action'));
                 }
-                // print_r($k);
-                // print_r($tmp);
                 $acl->addComponent(
                     strtolower($k),
                     $tmp,
@@ -42,13 +36,11 @@ class SecureController extends Controller
                 foreach ($allowData as $adk => $adv) {
                     foreach ($adv as $j) {
                         $acl->allow($row->role_name, strtolower($adk), $j);
-                        // echo "acl->allow('{$row->role_name}','{$adk}','{$j}')" . '<br>';
                     }
                 }
             }
         }
         file_put_contents($aclFile, serialize($acl));
-        // die();
         header("location:/admin?bearer=" . $this->request->getQuery()['bearer']);
     }
 
