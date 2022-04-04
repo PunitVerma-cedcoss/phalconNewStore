@@ -45,6 +45,30 @@
                         <p><?php echo $t->_('users permissions'); ?></p>
                     </div>
                 </a>
+                <a href="/secure/mkACL?bearer=<?php echo $token; ?>">
+                    <div class="tile-option flex hover:bg-white hover:text-indigo-500 p-2 rounded-lg justify-start items-center">
+                        <i class="fa fa-bolt mr-2"></i>
+                        <p><?php echo $t->_('build ACL'); ?></p>
+                    </div>
+                </a>
+                <a href="/product?bearer=<?php echo $token; ?>">
+                    <div class="tile-option flex hover:bg-white hover:text-indigo-500 p-2 rounded-lg justify-start items-center">
+                        <i class="fa fa-comment mr-2"></i>
+                        <p><?php echo $t->_('product'); ?></p>
+                    </div>
+                </a>
+                <a href="/order?bearer=<?php echo $token; ?>">
+                    <div class="tile-option flex hover:bg-white hover:text-indigo-500 p-2 rounded-lg justify-start items-center">
+                        <i class="fa fa-gift mr-2"></i>
+                        <p><?php echo $t->_('Order'); ?></p>
+                    </div>
+                </a>
+                <a href="/admin/logout?bearer=<?php echo $token; ?>">
+                    <div class="tile-option flex hover:bg-white hover:text-indigo-500 p-2 rounded-lg justify-start items-center">
+                        <i class="fa fa-power-off mr-2"></i>
+                        <p><?php echo $t->_('Log out'); ?></p>
+                    </div>
+                </a>
             </div>
         </div>
         <div class="border-t bg-gradient-to-t from-indigo-500 to-indigo-600 flex justify-around">

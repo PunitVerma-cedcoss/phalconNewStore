@@ -9,12 +9,12 @@ class AdminController extends Controller
     {
         $lang  = $this->request->getquery()['locale'] ?? 'en';
         $this->view->t = $this->translator;
+        $this->view->token = $this->session->get('token');
         // $this->assets->addJs('js/role.js');
         // $this->assets->addJs('js/lang.js');
         $list = new App\Components\Utilscomponent();
         $users = new Permissions();
         $this->view->data2 = $users::find();
-        $this->view->token = $this->request->getQuery()['bearer'];
         $this->view->data = $list->getList();
         if ($this->request->isPost()) {
             $controllers = [];
@@ -62,6 +62,7 @@ class AdminController extends Controller
     }
     public function editAction()
     {
+        $this->view->token = $this->session->get('token');
         $lang  = $this->request->getquery()['locale'] ?? 'en';
         $this->view->t = $this->translator;
         // $this->assets->addJs('js/lang.js');
@@ -141,6 +142,7 @@ class AdminController extends Controller
     }
     public function loginAction()
     {
+        $this->view->token = $this->session->get('token');
         $lang  = $this->request->getquery()['locale'] ?? 'en';
         $this->view->t = $this->translator;
         // $this->assets->addJs('js/lang.js');
@@ -189,5 +191,10 @@ class AdminController extends Controller
 
             // die();
         }
+    }
+    public function logoutAction()
+    {
+        $this->session->destroy();
+        header("location:/admin/login");
     }
 }

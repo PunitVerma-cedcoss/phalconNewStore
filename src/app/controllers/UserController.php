@@ -26,10 +26,8 @@ class UserController extends Controller
                         ]
                     ]
                 );
-                // print_r($userdata->email);
                 $userdata->delete();
                 header("location:/user?bearer=" . $this->session->get('token'));
-                // die();
             }
         }
     }
