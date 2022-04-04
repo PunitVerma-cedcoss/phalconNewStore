@@ -22,3 +22,33 @@
 [2022-04-04T09:55:05+00:00][info] user created role = accountant
 [2022-04-04T09:55:05+00:00][info] token assigned : eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJodHRwOi8vZXhhbXBsZS5vcmciLCJhdWQiOiJodHRwOi8vZXhhbXBsZS5jb20iLCJlbWFpbCI6ImFkbWluQHN0b3JlLmNvbSIsInBhc3N3b3JkIjoiMTIzNDUiLCJzdWIiOiJhZG1pbiIsImlhdCI6MTY0OTA2NjEwNCwibmJmIjoxNjQ5MDY2MDQ0LCJleHAiOjE2NDkxNTI1MDR9.6FsYaBLilXbrs6x98Jel6XJDNAQxyvDQgAG7XlFR7sY-YaiywAW1Voz7el7EYiIjQPFshdyrjyyWeYA4mTU8cA
 [2022-04-04T09:55:05+00:00][info] user is created
+[2022-04-04T10:30:20+00:00][info] user is being created
+[2022-04-04T10:30:20+00:00][info] user created email = punitverma@cedcoss.com
+[2022-04-04T10:30:20+00:00][info] user created password = 123
+[2022-04-04T10:30:20+00:00][info] user created role = admin
+[2022-04-04T10:30:20+00:00][info] token assigned : eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJodHRwOi8vZXhhbXBsZS5vcmciLCJhdWQiOiJodHRwOi8vZXhhbXBsZS5jb20iLCJlbWFpbCI6ImFkbWluQHN0b3JlLmNvbSIsInBhc3N3b3JkIjoiMTIzNDUiLCJzdWIiOiJhZG1pbiIsImlhdCI6MTY0OTA2ODIyMCwibmJmIjoxNjQ5MDY4MTYwLCJleHAiOjE2NDkxNTQ2MjB9.Q00Hlc1mCnUHpgMfoznZj8_oJ96YMIyWUObquMlldnQZEWG4aeqGTsPkEZaTB_R_5QNy6q_qpppUO-agw0O-xQ
+[2022-04-04T10:30:20+00:00][info] user is created
+[2022-04-04T10:30:27+00:00][info] user is being created
+[2022-04-04T10:30:27+00:00][info] user created email = hacker@hacker.com
+[2022-04-04T10:30:27+00:00][info] user created password = 123
+[2022-04-04T10:30:27+00:00][info] user created role = accountant
+[2022-04-04T10:30:27+00:00][info] token assigned : eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJodHRwOi8vZXhhbXBsZS5vcmciLCJhdWQiOiJodHRwOi8vZXhhbXBsZS5jb20iLCJlbWFpbCI6ImFkbWluQHN0b3JlLmNvbSIsInBhc3N3b3JkIjoiMTIzNDUiLCJzdWIiOiJhZG1pbiIsImlhdCI6MTY0OTA2ODIyNywibmJmIjoxNjQ5MDY4MTY3LCJleHAiOjE2NDkxNTQ2Mjd9.hY_W6YiIeNczZ_l8gOvs7B-4swUjiZ1PhpBE12k0keWpgw1P83U9Vjcjpi_3lzve-fR7HZ0K9Jk29Lcyp_Vw9A
+[2022-04-04T10:30:27+00:00][info] user is created
+[2022-04-04T10:30:34+00:00][info] user is being created
+[2022-04-04T10:30:34+00:00][info] user created email = tyft@uiuui.com
+[2022-04-04T10:30:34+00:00][info] user created password = 123
+[2022-04-04T10:30:34+00:00][info] user created role = manager
+[2022-04-04T10:30:34+00:00][info] token assigned : eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJodHRwOi8vZXhhbXBsZS5vcmciLCJhdWQiOiJodHRwOi8vZXhhbXBsZS5jb20iLCJlbWFpbCI6ImFkbWluQHN0b3JlLmNvbSIsInBhc3N3b3JkIjoiMTIzNDUiLCJzdWIiOiJhZG1pbiIsImlhdCI6MTY0OTA2ODIzNCwibmJmIjoxNjQ5MDY4MTc0LCJleHAiOjE2NDkxNTQ2MzR9.tPMtBD4YTI-gGOrtMG-JcN8--a9b5YJKP-oPwoyZQ5knJX8Fwn-F7FYXcV3shPV-umbdYeqQFu1RP1OO5-XWMw
+[2022-04-04T10:30:34+00:00][info] user is created
+[2022-04-04T10:30:39+00:00][info] user is being created
+[2022-04-04T10:30:39+00:00][info] user created email = tyft2@uiuui.com
+[2022-04-04T10:30:39+00:00][info] user created password = 123
+[2022-04-04T10:30:39+00:00][info] user created role = manager
+[2022-04-04T10:30:39+00:00][info] token assigned : eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJodHRwOi8vZXhhbXBsZS5vcmciLCJhdWQiOiJodHRwOi8vZXhhbXBsZS5jb20iLCJlbWFpbCI6ImFkbWluQHN0b3JlLmNvbSIsInBhc3N3b3JkIjoiMTIzNDUiLCJzdWIiOiJhZG1pbiIsImlhdCI6MTY0OTA2ODIzOCwibmJmIjoxNjQ5MDY4MTc4LCJleHAiOjE2NDkxNTQ2Mzh9.1yt96jiAqQ7_5lv5UqQ3yq34EIvpFhS_uQFMfnP_YjO3FZX0_z3vjGNpj0JKH6jfqEcYcNidkB1asUdiw4vUNA
+[2022-04-04T10:30:39+00:00][info] user is created
+[2022-04-04T10:30:42+00:00][info] user is being created
+[2022-04-04T10:30:42+00:00][info] user created email = tyft3@uiuui.com
+[2022-04-04T10:30:42+00:00][info] user created password = 123
+[2022-04-04T10:30:42+00:00][info] user created role = manager
+[2022-04-04T10:30:42+00:00][info] token assigned : eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJodHRwOi8vZXhhbXBsZS5vcmciLCJhdWQiOiJodHRwOi8vZXhhbXBsZS5jb20iLCJlbWFpbCI6ImFkbWluQHN0b3JlLmNvbSIsInBhc3N3b3JkIjoiMTIzNDUiLCJzdWIiOiJhZG1pbiIsImlhdCI6MTY0OTA2ODI0MiwibmJmIjoxNjQ5MDY4MTgyLCJleHAiOjE2NDkxNTQ2NDJ9.Lq_cgQnordlB5eaTqLJ4qSE44ZbN07SESgJFlA_YGVgRSLrX2_HTJoAVpxW6qYcWisALmz0P-lebgfyLErbnLA
+[2022-04-04T10:30:42+00:00][info] user is created

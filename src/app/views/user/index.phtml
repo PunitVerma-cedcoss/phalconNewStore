@@ -1,0 +1,51 @@
+<div class="lang fixed top-0 right-0 m-5 bg-white rounded-lg">
+    <div class="dd text-gray-500 capitalize">
+        <p class="p-2 border rounded-lg shadow cursor-pointer">select language <i class="text-lg fa fa-language"></i></p>
+        <div class="dd-content border divide-y rounded-lg m-1 hidden">
+            <a href="product?locale=en&bearer=<?php echo $token; ?>">
+                <p class="p-2 hover:bg-gray-100 cursor-pointer" data="en">English</p>
+            </a>
+            <a href="product?locale=hi&bearer=<?php echo $token; ?>">
+                <p class="p-2 hover:bg-gray-100 cursor-pointer" data="hi">Hindi</p>
+            </a>
+            <a href="product?locale=jp&bearer=<?php echo $token; ?>">
+                <p class="p-2 hover:bg-gray-100 cursor-pointer" data="jp">Japaease</p>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="h-screen capitalize w-screen bg-gray-200 flex flex-col justify-center items-center">
+    <form action="/user?bearer=<?php echo $token; ?>" method="post">
+        <div class="flex text-slate-700 bg-white rounded-lg shadow-sm w-3/4<div class=" h-screen w-screen bg-gray-200 flex justify-center items-center">
+            <table class="p-3">
+                <thead>
+                    <tr class="shadow">
+                        <th class="p-3 border"><?php echo $t->_("Select"); ?></th>
+                        <th class="p-3 border"><?php echo $t->_("Email"); ?></th>
+                        <th class="p-3 border"><?php echo $t->_("Password"); ?></th>
+                        <th class="p-3 border"><?php echo $t->_("role"); ?></th>
+                        <th class="p-3 border"><?php echo $t->_("token"); ?></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    foreach ($data as $user) {
+                    ?>
+                        <tr class="odd:bg-gray-100 even:bg-white cursor-pointer hover:bg-gray-100">
+                            <td class="p-3 border text-center"><input type="checkbox" class="appearance-none rounded-lg active:bg-indigo-500 focus:outline-indigo-500 checked:bg-indigo-500" name="<?php echo $user->id ?>" id=""></td>
+                            <td class="p-3 border"><?php echo $user->email ?></td>
+                            <td class="p-3 border"><?php echo $user->password ?></td>
+                            <td class="p-3 border"><?php echo $user->role ?></td>
+                            <td class="p-3 border"><?php echo $user->email ?></td>
+                        </tr>
+                    <?php
+                    }
+                    ?>
+                </tbody>
+            </table>
+        </div>
+        <button type="submit" class="bg-indigo-500 p-2 m-3 rounded-lg text-white">Delete</button>
+    </form>
+
+</div>
+</div>

@@ -133,12 +133,14 @@ class JwtInit extends Injectable
                 }
             } else {
                 $lang  = $this->request->getquery()['locale'] ?? 'en';
-                echo $this->translator->getTranslator($lang)->_("token has expired");
+                // echo $this->translator->getTranslator($lang)->_("token has expired");
+                echo "token has expired";
                 // echo "token has expired";
             }
         } catch (\Exception $e) {
             $lang  = $this->request->getquery()['locale'] ?? 'en';
-            echo $this->translator->getTranslator($lang)->_($e->getMessage());
+            // echo $this->translator->getTranslator($lang)->_($e->getMessage());
+            echo $e->getMessage();
             die();
         }
         // die();

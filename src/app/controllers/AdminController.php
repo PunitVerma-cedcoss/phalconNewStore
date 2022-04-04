@@ -155,20 +155,23 @@ class AdminController extends Controller
 
             $userDbData = $users::findFirst(
                 [
-                    'conditions' => 'email = :email: AND password = :password:',
+                    'conditions' => 'email = :email: AND password = :password: AND role = :role:',
                     'bind' => [
                         'email' => $email,
                         'password' => $password,
+                        'role' => "admin",
                     ]
                 ]
             );
             if ($userDbData) {
-                if ($userDbData->count() == 1) {
+                if ($userDbData->count()) {
                     // get the token and store in session
                     $now = new DateTimeImmutable();
                     $jwtinit = new \App\Components\JwtInit();
                     $token = $jwtinit->init($userDbData->role, $now, true);
                     $this->session->set("token", $token);
+                    $userDbData->token = $token;
+                    $userDbData->save();
                     if ($userDbData->role == "admin") {
                         header("location:/admin?bearer=" . $token);
                     } else {
@@ -179,7 +182,7 @@ class AdminController extends Controller
                     $this->view->error = "incorrect details";
                 }
             } else {
-                $this->view->error = "incorrect details";
+                $this->view->error = "incorrect details 2";
             }
 
             // echo $email;
